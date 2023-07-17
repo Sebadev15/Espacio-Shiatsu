@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/contacto.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Contacto_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Contacto_files/main.css">
+    <title>Contacto</title>
+</head>
+    <body cz-shortcut-listen="true">
+
+        <!-- 
+    ENCABEZADO
+ -->
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-3" id="menu">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/contacto.html#">
+            <span class="text-success fs-5 fw-bold">Siamotos</span> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html">Inicio</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5500/contacto.html#">Local</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5500/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+        
+                <form class="d-flex" role="search">
+                <img class="img-fluid" src="./Contacto_files/logo.jpeg" alt="logosia" height="80px" width="80px">
+                </form>
+            </div>
+            </div>
+        </nav>
+
+<!-- FORMULARIO -->
+
+<div class="contacto">
+    <div class="formulario">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required=""><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required=""><br><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" required=""></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="telefono">
+        <h2>Teléfono</h2>
+        <p>(+54) 11-69507918</p>
+        <h2>Redes Sociales</h2>
+        <ul>
+            <li><img src="./Contacto_files/facebook.png" width="20px" style="margin-right: 5%" alt="logofacebook"><a href="https://www.facebook.com/siamotos">Facebook</a></li>
+            <li><img src="./Contacto_files/whatsapp.png" width="20px" style="margin-right: 5%" alt="logowhatsapp"><a href="http://127.0.0.1:5500/contacto.html#">Whatsapp</a></li>
+            <li><img src="./Contacto_files/instagram.png" width="20px" style="margin-right: 5%" alt="logoinstragram"><a href="https://www.instagram.com/siamotos/?hl=es">Instagram</a></li>
+        </ul>
+    </div>
+    <div class="mapa">
+        <h2>Ubicación</h2>
+        <iframe src="./Contacto_files/embed.html" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+ 
+        
+        
+
+        <script src="./Contacto_files/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
