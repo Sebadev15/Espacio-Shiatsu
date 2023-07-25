@@ -8,16 +8,7 @@ body{
     background-color: black;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    height: 430;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    flex-direction: row; /* Agregado */
-}
+
 
 .container .card {
     width: 330px;
@@ -28,6 +19,7 @@ body{
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
+    
 }
 
 .container .card:hover {
@@ -40,10 +32,6 @@ body{
     height: 220px;
 }
 
-.container .card h4 {
-    font-weight: 600;
-}
-
 .container .card p {
     padding: 0 1rem;
     font-size: 16px;
@@ -54,6 +42,7 @@ body{
     font-weight: 500;   
     text-decoration: none;
     color: #3498db;  
+    margin-bottom: 10px;
 }
 
 #card{
@@ -90,6 +79,8 @@ form{
     align-items: flex-start;
     justify-content: center;
     flex-direction:row;
+    text-align: center;
+    
 }
 
 h2{
@@ -111,7 +102,7 @@ h4{
 }
 
 div p {
-    font-size: 20px;
+    font-size: 40px;
     color: #F9C132;
 }
 
@@ -141,6 +132,10 @@ iframe {
 }
 
 
+/* Establecer una altura diferente para la imagen de "Masajes de pie" */
+.container .card.masajes-pie img {
+    height: 244px; /* Ajustar esta altura según tus necesidades */
+}
 
 
 
@@ -157,8 +152,6 @@ iframe {
     }
 }
 
-
-
 @media(max-width: 576px){
     .icono-wrap{
         flex-wrap: wrap;
@@ -166,9 +159,38 @@ iframe {
     }
 }
 
+/* Estilos para pantallas mayores a 750px de ancho */
+@media (min-width: 751px) {
+    #card {
+    flex-direction: row;
+    }
+
+    .container .card {
+    width: 330px;
+    height: auto;
+    margin: 20px;
+    }
+}
+
+  /* Estilos para pantallas menores o iguales a 750px de ancho */
+@media (max-width: 750px) {
+    #card {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .container .card {
+    width: 100%;
+    max-width: 330px;
+    margin: 20px 0;
+    }
+}
+
+
 footer{
     background-color: #deb887;
     padding: 50px;
     text-align: center;
     text-decoration:bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
